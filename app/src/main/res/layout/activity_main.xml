@@ -36,7 +36,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
-                android:text="Change BG by click RB and Btn"
+                android:text="Change BG by click RB"
                 android:textColor="#E91E63" />
 
             <Switch
@@ -52,7 +52,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
-                android:text="Change BG by click RB"
+                android:text="Change BG by click RB and Btn"
                 android:textColor="#F44336" />
         </LinearLayout>
 
