@@ -2,16 +2,20 @@ package com.example.ex062;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout ll;
+    LinearLayout MainActivity;
 
     Switch swB;
 
@@ -19,17 +23,16 @@ public class MainActivity extends AppCompatActivity {
 
     RadioButton rbRed, rbGreen, rbBlue, rbYellow;
 
-    Boolean rbCheck;
+    ArrayList<Integer> idArr, colorsArr;
 
-    RadioButton[] idArr;
-    String[] valuesArr;
+    int rbID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ll = (LinearLayout) findViewById(R.id.activity_main);
+        MainActivity = (LinearLayout) findViewById(R.id.activity_main);
 
         swB = (Switch) findViewById(R.id.swB);
 
@@ -40,22 +43,32 @@ public class MainActivity extends AppCompatActivity {
         rbBlue = (RadioButton) findViewById(R.id.rbBlue);
         rbYellow = (RadioButton) findViewById(R.id.rbYellow);
 
-        rbCheck = false;
+        // create a color's array
+        colorsArr = new ArrayList<Integer>(5);
+        colorsArr.add(Color.RED);
+        colorsArr.add(Color.GREEN);
+        colorsArr.add(Color.BLUE);
+        colorsArr.add(Color.YELLOW);
 
-        valuesArr = new String[]{"red", "green", "blue", "yellow"};
-        idArr = new RadioButton[]{rbRed, rbGreen, rbBlue, rbYellow};
-        // TODO: add the thing of change bc && check if idArr is needed!!!
-
-    }
-
-    public void rgClicked(View view) {
-        rbCheck = true;
+        // create a id's array
+        idArr = new ArrayList<Integer>(5);
+        idArr.add(R.id.rbRed);
+        idArr.add(R.id.rbGreen);
+        idArr.add(R.id.rbBlue);
+        idArr.add(R.id.rbYellow);
     }
 
     public void changeBC(View view) {
-        if (rbCheck)
-        {
-            int rbID = rg.getCheckedRadioButtonId();
+        if (!swB.isChecked()) {
+            rbID = rg.getCheckedRadioButtonId();
+            MainActivity.setBackgroundColor(colorsArr.get(idArr.indexOf(rbID)));
         }
+
+    }
+
+    public void chaneClicked(View view) {
+        rbID = rg.getCheckedRadioButtonId();
+        if ((rbID != -1) && swB.isChecked())
+            MainActivity.setBackgroundColor(colorsArr.get(idArr.indexOf(rbID)));
     }
 }

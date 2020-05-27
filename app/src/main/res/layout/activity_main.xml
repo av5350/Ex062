@@ -26,7 +26,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0px"
-            android:layout_weight="4"
+            android:layout_weight="8"
+            android:background="#F6F4F4"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -35,21 +36,24 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
-                android:text="Change BG by click RB and Btn" />
+                android:text="Change BG by click RB and Btn"
+                android:textColor="#E91E63" />
 
             <Switch
                 android:id="@+id/swB"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textColorLink="#F9A825" />
 
             <TextView
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
-                android:text="Change BG by click RB" />
+                android:text="Change BG by click RB"
+                android:textColor="#F44336" />
         </LinearLayout>
 
         <Space
@@ -60,9 +64,9 @@
         <RadioGroup
             android:id="@+id/rg"
             android:layout_width="match_parent"
-            android:layout_height="0px"
+            android:layout_height="300dp"
             android:layout_weight="20"
-            android:onClick="rgClicked">
+            android:background="#F6F4F4">
 
             <RadioButton
                 android:id="@+id/rbRed"
@@ -70,28 +74,35 @@
                 android:layout_height="0px"
                 android:layout_weight="10"
                 android:onClick="changeBC"
-                android:text="red" />
+                android:text="red"
+                android:textColor="#FF0000" />
 
             <RadioButton
                 android:id="@+id/rbGreen"
                 android:layout_width="match_parent"
                 android:layout_height="0px"
                 android:layout_weight="10"
-                android:text="green" />
+                android:onClick="changeBC"
+                android:text="green"
+                android:textColor="#A6C583" />
 
             <RadioButton
                 android:id="@+id/rbBlue"
                 android:layout_width="match_parent"
                 android:layout_height="0px"
                 android:layout_weight="10"
-                android:text="blue" />
+                android:onClick="changeBC"
+                android:text="blue"
+                android:textColor="#03A9F4" />
 
             <RadioButton
                 android:id="@+id/rbYellow"
                 android:layout_width="match_parent"
                 android:layout_height="0px"
                 android:layout_weight="10"
-                android:text="yellow" />
+                android:onClick="changeBC"
+                android:text="yellow"
+                android:textColor="#FAE000" />
         </RadioGroup>
 
         <Space
@@ -102,8 +113,11 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="0px"
-            android:layout_weight="5"
-            android:text="Change" />
+            android:layout_weight="10"
+            android:background="#A7FFEB"
+            android:onClick="chaneClicked"
+            android:text="Change"
+            android:textColor="#8E24AA" />
 
         <Space
             android:layout_width="match_parent"
