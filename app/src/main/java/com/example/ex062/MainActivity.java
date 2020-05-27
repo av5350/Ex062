@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     RadioButton rbRed, rbGreen, rbBlue, rbYellow;
 
-    ArrayList<Integer> idArr, colorsArr;
+    ArrayList<Integer> idList, colorsList;
 
     int rbID;
 
@@ -44,24 +44,24 @@ public class MainActivity extends AppCompatActivity {
         rbYellow = (RadioButton) findViewById(R.id.rbYellow);
 
         // create a color's array
-        colorsArr = new ArrayList<Integer>(5);
-        colorsArr.add(Color.RED);
-        colorsArr.add(Color.GREEN);
-        colorsArr.add(Color.BLUE);
-        colorsArr.add(Color.YELLOW);
+        colorsList = new ArrayList<Integer>(4);
+        colorsList.add(Color.RED);
+        colorsList.add(Color.GREEN);
+        colorsList.add(Color.BLUE);
+        colorsList.add(Color.YELLOW);
 
         // create a id's array
-        idArr = new ArrayList<Integer>(5);
-        idArr.add(R.id.rbRed);
-        idArr.add(R.id.rbGreen);
-        idArr.add(R.id.rbBlue);
-        idArr.add(R.id.rbYellow);
+        idList = new ArrayList<Integer>(4);
+        idList.add(R.id.rbRed);
+        idList.add(R.id.rbGreen);
+        idList.add(R.id.rbBlue);
+        idList.add(R.id.rbYellow);
     }
 
     public void changeBC(View view) {
         if (!swB.isChecked()) {
             rbID = rg.getCheckedRadioButtonId();
-            MainActivity.setBackgroundColor(colorsArr.get(idArr.indexOf(rbID)));
+            MainActivity.setBackgroundColor(colorsList.get(idList.indexOf(rbID)));
         }
 
     }
@@ -69,6 +69,6 @@ public class MainActivity extends AppCompatActivity {
     public void chaneClicked(View view) {
         rbID = rg.getCheckedRadioButtonId();
         if ((rbID != -1) && swB.isChecked())
-            MainActivity.setBackgroundColor(colorsArr.get(idArr.indexOf(rbID)));
+            MainActivity.setBackgroundColor(colorsList.get(idList.indexOf(rbID)));
     }
 }
