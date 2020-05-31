@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
             rbID = rg.getCheckedRadioButtonId();
             MainActivity.setBackgroundColor(colorsList.get(idList.indexOf(rbID)));
         }
-
     }
 
     public void chaneClicked(View view) {
