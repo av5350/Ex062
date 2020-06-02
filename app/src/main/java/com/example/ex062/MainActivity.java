@@ -36,11 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
         rg = (RadioGroup) findViewById(R.id.rg);
 
-        rbRed = (RadioButton) findViewById(R.id.rbRed);
-        rbGreen = (RadioButton) findViewById(R.id.rbGreen);
-        rbBlue = (RadioButton) findViewById(R.id.rbBlue);
-        rbYellow = (RadioButton) findViewById(R.id.rbYellow);
-
         // create a color's array
         colorsList = new ArrayList<Integer>(4);
         colorsList.add(Color.RED);
