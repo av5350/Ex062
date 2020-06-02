@@ -21,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
     RadioGroup rg;
 
-    RadioButton rbRed, rbGreen, rbBlue, rbYellow;
-
     ArrayList<Integer> idList, colorsList;
 
     int rbID;
